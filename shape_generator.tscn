@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3u0qot8lkkf6"]
+
+[ext_resource type="Script" path="res://shape_generator.gd" id="1_7hjmf"]
+[ext_resource type="PackedScene" uid="uid://cgrlyovgfvxj0" path="res://shape.tscn" id="2_sr047"]
+
+[node name="ShapeGenerator" type="Node2D"]
+script = ExtResource("1_7hjmf")
+
+[node name="LShape" parent="." instance=ExtResource("2_sr047")]
+cells = "x00
+x00
+xx0"
+color = Color(0.980392, 0, 0, 1)
+
+[node name="JShape" parent="." instance=ExtResource("2_sr047")]
+cells = "00x
+00x
+0xx"
+color = Color(0.678431, 0.396078, 0.196078, 1)
+
+[node name="SShape" parent="." instance=ExtResource("2_sr047")]
+cells = "0xx
+xx0
+000"
+color = Color(0.690196, 0.631373, 0.152941, 1)
+
+[node name="ZShape" parent="." instance=ExtResource("2_sr047")]
+cells = "xx0
+0xx
+000"
+color = Color(0.329412, 0.737255, 0.376471, 1)
+
+[node name="TShape" parent="." instance=ExtResource("2_sr047")]
+cells = "xxx
+0x0
+000"
+color = Color(0.407843, 0.905882, 0.87451, 1)
+
+[node name="IShape" parent="." instance=ExtResource("2_sr047")]
+cells = "0x00
+0x00
+0x00
+0x00"
+color = Color(0.152941, 0.419608, 0.670588, 1)
+
+[node name="CShape" parent="." instance=ExtResource("2_sr047")]
+cells = "xx
+xx"
+color = Color(0.658824, 0.419608, 0.917647, 1)
