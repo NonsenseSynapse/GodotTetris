@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbiokoha481e0"]
+
+[ext_resource type="Script" path="res://GameBoard.gd" id="1_trug8"]
+[ext_resource type="Texture2D" uid="uid://byc7q170tfw8f" path="res://assets/block-texture1.png" id="2_pn8y0"]
+[ext_resource type="Texture2D" uid="uid://duy7kirihftd4" path="res://assets/block-texture2.png" id="3_f024a"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2rkxn"]
+texture = ExtResource("2_pn8y0")
+texture_region_size = Vector2i(200, 200)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3258k"]
+texture = ExtResource("3_f024a")
+texture_region_size = Vector2i(200, 200)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_h7hxv"]
+tile_size = Vector2i(200, 200)
+sources/0 = SubResource("TileSetAtlasSource_2rkxn")
+sources/1 = SubResource("TileSetAtlasSource_3258k")
+
+[node name="GameBoard" type="Node2D"]
+script = ExtResource("1_trug8")
+tile_size = 50
+default_tile_texture = ExtResource("2_pn8y0")
+color = Color(0.305882, 0.568627, 0.866667, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = 475.0
+offset_top = 5.0
+offset_right = 775.0
+offset_bottom = 605.0
+size_flags_horizontal = 4
+color = Color(0.898039, 0.623529, 0.780392, 1)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(475, 5)
+scale = Vector2(0.25, 0.25)
+tile_set = SubResource("TileSet_h7hxv")
+cell_quadrant_size = 12
+format = 2
+layer_0/name = "Background"
+layer_1/name = "Current Blocks"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array()

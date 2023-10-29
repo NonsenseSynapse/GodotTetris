@@ -1,10 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgrlyovgfvxj0"]
 
 [ext_resource type="Script" path="res://TShape.gd" id="1_8eyny"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7icms"]
-size = Vector2(25, 25)
+[ext_resource type="Texture2D" uid="uid://byc7q170tfw8f" path="res://assets/block-texture1.png" id="2_x8yln"]
 
 [node name="TetrisShape" type="Node2D"]
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_8eyny")
-tile_texture = SubResource("PlaceholderTexture2D_7icms")
+tile_texture = ExtResource("2_x8yln")

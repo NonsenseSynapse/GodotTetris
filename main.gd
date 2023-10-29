@@ -10,6 +10,7 @@ func _ready():
 	var shape = $ShapeGenerator.generate()
 	current_shape = shape
 	shape.show()
+	print($TetrisShape.tile_square_length)
 		
 
 
@@ -64,10 +65,8 @@ func _on_drop_timer_timeout():
 func _on_rotation_timer_timeout():
 	rotation_lock = false
 
-
 func _on_slow_drop_timer_timeout():
 	slow_drop_lock = false
-
 
 func _on_movement_timer_timeout():
 	movement_lock = false

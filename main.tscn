@@ -16,15 +16,16 @@ wait_time = 2.0
 autostart = true
 
 [node name="RotationTimer" type="Timer" parent="."]
-wait_time = 0.25
+wait_time = 0.2
 one_shot = true
 
 [node name="SlowDropTimer" type="Timer" parent="."]
-wait_time = 0.25
+wait_time = 0.2
 one_shot = true
 
 [node name="MovementTimer" type="Timer" parent="."]
-wait_time = 0.25
+wait_time = 0.2
+one_shot = true
 
 [connection signal="timeout" from="DropTimer" to="." method="_on_drop_timer_timeout"]
 [connection signal="timeout" from="RotationTimer" to="." method="_on_rotation_timer_timeout"]
